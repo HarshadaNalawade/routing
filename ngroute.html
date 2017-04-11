@@ -11,7 +11,10 @@
       <!-- load angular and angular route via CDN -->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
           <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-      <script src="app.js"></script>
+      <script src="ngroute.js"></script>
+
+      <meta charset="utf-8">
+      <base href="/angularjs/routing/">
     </head>
     <body ng-controller="mainController">
 
@@ -25,9 +28,9 @@
                 </div>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
-                    <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+                    <li><a href="home"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="about"><i class="fa fa-shield"></i> About</a></li>
+                    <li><a href="contact"><i class="fa fa-comment"></i> Contact</a></li>
                 </ul>
             </div>
             </nav>
@@ -38,7 +41,7 @@
             {{ message }}
             <!-- angular templating -->
             <!-- this is where content will be injected -->
-
+            <div ng-view></div>
         </div>
 
     </body>
